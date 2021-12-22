@@ -1,3 +1,21 @@
+import pandas as pd
+import numpy as np
+import re
+
+import nltk
+from nltk.corpus import stopwords
+
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.text import text_to_word_sequence
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+import statistics
+
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, Embedding, LSTM
+
+nltk.download('stopwords')
+
+
 # ==================== step1 : load data ====================
 
 # train dataset
